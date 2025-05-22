@@ -481,7 +481,7 @@ jobs:
           helm repo update
           helm upgrade --install nginx-ingress ingress-nginx/ingress-nginx \
             --version 4.10.0 \
-            -f .github/workflows/values.yaml
+            -f ./values.yaml
 
         # By default, Azure IP addresses don't have a DNS name. We need it for our TLS cert to be issued.
         # We set it by updating the label of the IP address resource in Azure, but the domain part is not user-settable. 
