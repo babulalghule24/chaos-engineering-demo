@@ -4,8 +4,7 @@ controller:
     kubernetes.io/os: linux
   service:
     externalTrafficPolicy: Local
-  deployment:
-    progressDeadlineSeconds: 600
+  progressDeadlineSeconds: 600
   admissionWebhooks:
     patch:
       nodeSelector:
