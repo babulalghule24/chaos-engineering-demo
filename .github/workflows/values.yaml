@@ -1,0 +1,18 @@
+controller:
+  replicaCount: 1
+  nodeSelector:
+    kubernetes.io/os: linux
+  service:
+    externalTrafficPolicy: Local
+  deployment:
+    progressDeadlineSeconds: 600
+
+defaultBackend:
+  nodeSelector:
+    kubernetes.io/os: linux
+
+controller:
+  admissionWebhooks:
+    patch:
+      nodeSelector:
+        kubernetes.io/os: linux
